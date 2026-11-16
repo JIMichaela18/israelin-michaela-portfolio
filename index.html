@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en" data-mode="tech">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Israelin Michaela | Java Engineer and Maker</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=JetBrains+Mono:wght@400;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+--bg:#0b0f14;--surface:#121923;--ink:#e6edf3;--muted:#93a3b8;--line:#243040;--ac:#3ddc97;--aci:#06210f;
+--disp:"Space Grotesk",system-ui,sans-serif;--mono:"JetBrains Mono",ui-monospace,monospace;--rad:6px;--n1:#17382d;--n2:#1b2a40;--n3:#12323b;--n4:#25352a;--n5:#222c38;--tape:rgba(255,255,255,.14);color-scheme:dark}
+[data-mode="create"]{--bg:#f6efe4;--surface:#fffaf1;--ink:#231a17;--muted:#6b5d54;--line:#dccfbd;--ac:#d9381e;--aci:#fff7ee;
+--disp:"Instrument Serif",Georgia,serif;--rad:22px;--n1:#ffe3c2;--n2:#ffd0c4;--n3:#f9e6a8;--n4:#f2d4c0;--n5:#e8d9c0;--tape:rgba(255,255,255,.6);color-scheme:light}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.02rem/1.65 "Space Grotesk",system-ui,sans-serif;transition:background .6s,color .6s}
+[data-mode="tech"] body{background-image:linear-gradient(color-mix(in srgb,var(--line) 45%,transparent) 1px,transparent 1px),linear-gradient(90deg,color-mix(in srgb,var(--line) 45%,transparent) 1px,transparent 1px);background-size:44px 44px}
+.spot{position:fixed;inset:0;pointer-events:none;background:radial-gradient(380px circle at var(--mx,50%) var(--my,25%),color-mix(in srgb,var(--ac) 18%,transparent),transparent 70%)}
+.wrap{position:relative;max-width:1060px;margin:0 auto;padding:0 1.25rem}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--ac);outline-offset:3px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1.2rem 0;font:600 1rem var(--mono)}
+.btn,.tab,.cq{font:600 .88rem var(--mono);color:inherit;background:transparent;border:2px solid var(--ink);border-radius:var(--rad);padding:.6rem 1.1rem;cursor:pointer;text-decoration:none;display:inline-block;transition:transform .15s,background .2s}
+.btn:hover,.tab:hover,.cq:hover{transform:translateY(-2px)}
+.btn.p,.tab[aria-pressed="true"]{background:var(--ac);border-color:var(--ac);color:var(--aci)}
+h1,h2{font-family:var(--disp);font-weight:700;margin:0}
+[data-mode="create"] h1,[data-mode="create"] h2{font-weight:400;font-style:italic}
+h1{font-size:clamp(3.2rem,14vw,8.5rem);line-height:.95;letter-spacing:-.04em;margin:.6rem 0}
+h1 span{display:block;width:fit-content;animation:pop .8s cubic-bezier(.2,.9,.3,1.3) both;transition:transform .2s}
+h1 span:nth-child(2){animation-delay:.1s}h1 span:nth-child(3){animation-delay:.2s}h1 span:nth-child(4){animation-delay:.3s}
+h1 span:first-child:hover{transform:translateY(-.08em) rotate(-7deg);color:var(--ac)}
+@keyframes pop{from{opacity:0;transform:translateY(.4em) rotate(8deg)}}
+@keyframes up{from{opacity:0;transform:translateY(10px)}}
+@keyframes pulse{50%{opacity:.25}}
+@keyframes mq{to{transform:translateX(-50%)}}
+h2{font-size:clamp(2rem,5vw,3.2rem);line-height:1.05;margin-bottom:1.5rem}
+.now{display:inline-flex;align-items:center;gap:.5rem;border:1.5px solid var(--line);background:var(--surface);border-radius:999px;padding:.25rem .9rem;font:.82rem var(--mono);margin:1.5rem 0 0}
+.now i{width:.55rem;height:.55rem;border-radius:50%;background:var(--ac);animation:pulse 1.4s infinite}
+.role{font:600 clamp(1.1rem,3vw,1.6rem) var(--mono);color:var(--ac);min-height:2.2rem;margin:0}
+.role::after{content:"▌";animation:pulse 1s infinite}
+.lead{color:var(--muted);margin:1rem 0 1.5rem}
+.btns{display:flex;gap:.75rem;flex-wrap:wrap}
+.stats{display:flex;gap:2.5rem;flex-wrap:wrap;margin:2.5rem 0 3rem}
+.stats strong{display:block;font:700 2.4rem var(--disp)}.stats small{color:var(--muted);font:.8rem var(--mono)}
+.mq{overflow:hidden;border-block:1px solid var(--line);padding:.8rem 0;font:600 1rem var(--mono);white-space:nowrap}
+.mq-t{display:inline-block;animation:mq 30s linear infinite}
+.mq-t span{margin:0 1.5rem}.mq-t span::before{content:"✦ ";color:var(--ac)}
+section{padding:4.5rem 0 1rem}
+.about{color:var(--muted)}.about strong{color:var(--ink)}
+.tabs{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.4rem}
+.tab{padding:.3rem .8rem;font-size:.75rem;border-width:1.5px}.pills{display:flex;flex-wrap:wrap;gap:.3rem}
+.pill{border:1px solid var(--ink);border-radius:999px;padding:.05rem .45rem;font:.78rem var(--mono);background:var(--surface)}.in .pill{animation:up .4s both}
+details{border:1px solid var(--line);border-radius:var(--rad);background:var(--surface);margin-bottom:.8rem}
+summary{cursor:pointer;padding:1rem 1.2rem;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+summary::-webkit-details-marker{display:none}
+summary small{font:400 .8rem var(--mono);color:var(--muted)}
+details[open] summary{border-bottom:1px solid var(--line)}
+details ul{margin:0;padding:.5rem 1.2rem 1rem 2.4rem;color:var(--muted)}
+.pj{margin:0;padding:1rem 1.2rem 0;font:600 .82rem var(--mono);color:var(--ac)}
+.tiles,.works{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1rem}
+.tiles{gap:1.6rem}
+.tile{position:relative;padding:1.6rem 1.2rem 1.2rem;color:var(--ink);background:var(--n1);box-shadow:0 10px 16px -6px rgba(0,0,0,.35);border-radius:2px 2px 2px 18px;transform:rotate(var(--t,-2deg));transition:transform .25s;font-family:"Instrument Serif",Georgia,serif}
+.tile::before{content:"";position:absolute;top:-10px;left:50%;width:70px;height:20px;margin-left:-35px;background:var(--tape);transform:rotate(-3deg)}
+.tile:nth-child(2n){background:var(--n2);--t:1.8deg}.tile:nth-child(3n){background:var(--n3);--t:-1deg}.tile:nth-child(4n){background:var(--n4);--t:2.2deg}.tile:nth-child(5n){background:var(--n5)}
+.tile:hover{transform:rotate(0) translateY(-6px) scale(1.04)}
+.tile b{display:block;font-size:2rem;font-weight:400}
+.tile strong{display:block;font-size:1.5rem;font-weight:400;font-style:italic;line-height:1.1}
+.tile span{display:block;margin-top:.4rem;font:.9rem/1.45 "Space Grotesk",system-ui,sans-serif}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--rad);padding:1.3rem;display:flex;flex-direction:column;gap:.6rem}
+.card a{font-weight:600;color:var(--ac)}.card h3{margin:0;font-size:1.15rem}.card p{margin:0;color:var(--muted);font-size:.95rem}
+.tags{display:flex;flex-wrap:wrap;gap:.4rem}.tags span{font:.75rem var(--mono);border:1px solid var(--line);border-radius:6px;padding:.1rem .5rem;color:var(--muted)}
+.chat{background:var(--surface);border:1px solid var(--line);border-radius:var(--rad);padding:1rem}
+.log{height:250px;overflow-y:auto;display:flex;flex-direction:column;gap:.6rem}
+.msg{max-width:85%;padding:.6rem .9rem;border-radius:12px;font-size:.96rem}
+.msg.bot{background:var(--bg);align-self:flex-start}.msg.me{background:var(--ink);color:var(--bg);align-self:flex-end}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin:.8rem 0}
+.cq{padding:.3rem .8rem;border-radius:999px;font-size:.78rem}
+.row{display:flex;gap:.5rem}
+.row input{flex:1;min-width:0;font:inherit;padding:.7rem .9rem;border-radius:var(--rad);border:1px solid var(--line);background:var(--bg);color:var(--ink)}
+.contact p{color:var(--muted)}
+footer{padding:3rem 0;color:var(--muted);font:.8rem var(--mono)}
+#education .card{position:relative;padding-top:1.9rem;box-shadow:0 10px 16px -8px rgba(0,0,0,.4);transform:rotate(var(--t,-1.2deg));transition:transform .25s}
+#education .card:nth-child(even){--t:1.4deg}
+#education .card:hover{transform:rotate(0) translateY(-5px)}
+#education .card::before{content:"";position:absolute;top:-9px;left:50%;width:18px;height:18px;margin-left:-9px;border-radius:50%;background:radial-gradient(circle at 35% 30%,rgba(255,255,255,.75) 0 12%,var(--ac) 45%);box-shadow:0 4px 5px rgba(0,0,0,.45)}
+.js .rv{opacity:0;transform:translateY(26px);transition:opacity .7s,transform .7s}
+.js .rv.in{opacity:1;transform:none}
+@media (max-width:600px){.stats{gap:1.5rem}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}html{scroll-behavior:auto}.js .rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="spot" aria-hidden="true"></div>
+<div class="wrap">
+  <header class="top"><span>IM<span style="color:var(--ac)">.dev</span></span><button id="mode" class="btn" type="button" aria-pressed="false">Switch to Create ✦</button></header>
+
+  <main>
+    <div class="hero">
+      <p class="now"><i></i>Currently tinkering: AI-driven Java applications from scratch 🛠️</p>
+      <h1 aria-label="Israelin Michaela"><span aria-hidden="true">Israelin</span><span aria-hidden="true">Michaela</span></h1>
+      <p class="role" id="type" aria-hidden="true"></p>
+      <p class="lead">Java backend engineer with 4.5 years of experience, and a maker at heart. I draw, paint, cook, bake, and garden. I enjoy experimenting new things. I’m looking for a full-time Java and Spring Boot backend or full-stack role. This page shows both sides of me and how they work together. Try the switch at the top.</p>
+      <div class="btns"><a class="btn p" href="#work">See my work</a><a class="btn" href="#contact">Hire me</a><a class="btn" href="#" data-resume download="Israelin_Michaela_Resume.pdf">Download resume ⬇</a></div>
+      <div class="stats">
+        <div><strong><span data-n="4.5">0</span>+</strong><small>years in Java</small></div>
+        <div><strong><span data-n="3">0</span></strong><small>engineering roles</small></div>
+        <div><strong><span data-n="7">0</span></strong><small>creative crafts</small></div>
+      </div>
+    </div>
+
+    <div class="mq" aria-hidden="true"><div class="mq-t"><span>Creative thinker</span><span>Rapid learner</span><span>Adaptable</span><span>End-to-end ownership</span><span>Cross-functional collaborator</span><span>Client requirement gathering</span><span>Knowledge sharing</span><span>POC experimentation</span></div></div>
+
+    <section id="about" class="rv">
+      <h2>Who I am</h2>
+      <p class="about"><strong>Technical first, creative second, and I use both.</strong> I build and maintain backend systems that need to be reliable: APIs, databases, batch jobs, secure enterprise and distributed applications. I also make things by hand, and that habit of sketching, testing and refining shapes how I write software.</p>
+      <p class="about">I’m on a career break since May 2023 because of a relocation. I’m returning with fresh momentum, upskilling to adapt to vast technologies and exploring AI with Java.</p>
+    </section>
+
+    <section id="skills" class="rv">
+      <h2>What I can do</h2>
+      <div class="tabs" id="tabs"></div>
+      <div class="pills" id="pills" aria-live="polite"></div>
+    </section>
+
+    <section id="experience" class="rv">
+      <h2>Where I’ve been</h2>
+      <details open><summary>Career break: Relocation <small>May 2023 – present</small></summary>
+        <ul><li>Relocated, and now upskilling with AI: Diving deep into modern Java internals alongside event-driven architecture with microservices and Kafka. Separately, I'm building and integrating AI chatbots right here on my portfolio using LangChain4j and MCP.</li></ul></details>
+      <details><summary>Software Engineer, Capestart <small>Mar 2022 – Apr 2023</small></summary>
+        <ul><li>Built and enhanced backend services for a light commercial product selection application.</li>
+        <li>Supported application modernization: code and database analysis, migration and API lifecycle management.</li>
+        <li>Improved performance through tuning, troubleshooting and root cause analysis (RCA); resolved production issues and supported deployments.</li>
+        <li>Raised code quality through reviews, technical guidance and collaboration.</li></ul></details>
+      <details><summary>Full Stack Developer, NICSI, NIC <small>Jun 2019 – Feb 2022</small></summary>
+        <p class="pj">Project 2 · May 2020 – Feb 2022</p>
+        <ul><li>Enhanced an enterprise application for regulatory operations.</li>
+        <li>Resolved defects, reviewed code, deployed to production, ran vulnerability assessments and fixed security defects.</li>
+        <li>Built a proof of concept that automates document data extraction and validation with batch processing.</li></ul>
+        <p class="pj">Project 1 · Jun 2019 – Apr 2020</p>
+        <ul><li>Developed and enhanced an enterprise application for audit workflow management.</li>
+        <li>Debugging, static code analysis and security defect remediation to improve stability.</li></ul></details>
+      <details><summary>Software Developer Intern, NIC <small>Nov 2018 – May 2019</small></summary>
+        <ul><li>Built backend services for a digital tracking application with role-based access control (RBAC).</li>
+        <li>Redesigned the database schema for a key module and integrated it with the frontend.</li></ul></details>
+    </section>
+
+    <section id="education" class="rv">
+      <h2>Education and recognition</h2>
+      <div class="works">
+        <article class="card"><h3>Master of Computer Applications (MCA)</h3><p>Mepco Schlenk Engineering College, 2017 – 2019</p></article>
+        <article class="card"><h3>Superstar Q3, 2022 · Capestart</h3><p>Recognized for high-quality delivery, rapid adaptation to new technologies, client requirement gathering, ownership and knowledge sharing.</p></article>
+        <article class="card"><h3>Cloud Computing · NPTEL</h3><p>Elite Certification, Aug 2017 – Oct 2017</p></article>
+        <article class="card"><h3>Languages</h3><p>English, Tamil</p></article>
+      </div>
+    </section>
+
+    <section id="creative" class="rv">
+      <h2>How it all connects</h2>
+      <p class="about" style="margin-bottom:1.2rem">Each craft shows up in how I engineer.</p>
+      <div class="tiles" id="tiles"></div>
+    </section>
+
+    <section id="work" class="rv">
+      <h2>Selected work</h2>
+      <div class="works">
+	    <article class="card"><h3>digi-content</h3><p>Production-style digital billing and subscription platform built with Java 27 and Spring Boot, exploring microservices, event-driven architecture, resilience, and distributed systems.</p><div class="tags"><span>Java</span><span>Spring Boot</span><span>Microservices</span><span>Kafka</span></div><a href="https://github.com/JIMichaela18/digi-content">View on GitHub</a></article>
+        <article class="card"><h3>spring-boot-jpa-relationship-mappings</h3><p>A Spring Boot and Spring Data JPA project demonstrating relational mapping annotations (@OneToOne, @OneToMany, @ManyToOne, @ManyToMany) through a RESTful API.</p><div class="tags"><span>Java</span><span>Spring Boot</span><span>JPA</span></div><a href="https://github.com/JIMichaela18/spring-boot-jpa-relationship-mappings">View on GitHub</a></article>
+        <article class="card"><h3>jsp-servlet-crud-employee-details</h3><p>A legacy Java web application with complete CRUD for employee records, using JSP, Servlets, JDBC and MySQL.</p><div class="tags"><span>Java</span><span>JSP</span><span>Servlets</span><span>JDBC</span><span>MySQL</span></div><a href="https://github.com/JIMichaela18/jsp-servlet-crud-employee-details">View on GitHub</a></article>
+      </div>
+    </section>
+
+    <section id="ask" class="rv">
+      <h2>Ask Israelin ✦</h2>
+      <div class="chat">
+        <div id="log" class="log" role="log" aria-live="polite"><div class="msg bot">Hi! I’m a small demo assistant for this portfolio. What would you like to know?</div></div>
+        <div id="chips" class="chips"></div>
+        <div class="row"><input id="q" type="text" placeholder="Ask about skills, experience or creative work" aria-label="Your question"><button id="send" class="btn p" type="button">Ask</button></div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact rv">
+      <h2>Let’s work together ☺</h2>
+      <p>I’m looking for a full-time Java and Spring Boot backend or full-stack role, including AI-focused teams. Send me a message or download my resume.</p>
+      <div class="btns"><a class="btn p" href="mailto:jimichaela18@gmail.com" target="_blank" rel="noopener noreferrer">Email me</a><a class="btn" href="#" data-resume download="Israelin_Michaela_Resume.pdf">Download resume ⬇</a><a class="btn" href="https://github.com/JIMichaela18/">GitHub</a><a class="btn" href="https://www.linkedin.com/in/israelin-michaela-joseph-b088241b0/">LinkedIn</a></div>
+    </section>
+  </main>
+  <footer>© 2026 Israelin Michaela. Crafted with <span>&lt;code/&gt;</span> and creative tinkering.</footer>
+</div>
+<script>
+(function(){
+  var d = document, R = d.documentElement; R.classList.add("js");
+  var $ = function(s){ return d.querySelector(s); }, $$ = function(s){ return [].slice.call(d.querySelectorAll(s)); };
+  var rm = matchMedia("(prefers-reduced-motion:reduce)").matches;
+
+  var mb = $("#mode");
+  mb.onclick = function(){
+    var c = R.dataset.mode === "create";
+    R.dataset.mode = c ? "tech" : "create";
+    mb.setAttribute("aria-pressed", String(!c));
+    mb.textContent = c ? "Switch to Create ✦" : "Switch to Compile ▸";
+  };
+  addEventListener("pointermove", function(e){ R.style.setProperty("--mx", e.clientX + "px"); R.style.setProperty("--my", e.clientY + "px"); });
+
+  var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } }); }, {threshold:.12});
+  $$(".rv").forEach(function(n){ io.observe(n); });
+
+  var roles = ["Java Backend Engineer","Full Stack Developer", "Spring Boot Developer","Cook, Painter, Gardener","Curious builder"], ri = 0, ci = 0, del = false, ty = $("#type");
+  function tick(){
+    var w = roles[ri]; ci += del ? -1 : 1; ty.textContent = w.slice(0, ci);
+    var s = del ? 30 : 70;
+    if (!del && ci === w.length){ del = true; s = 1400; } else if (del && ci === 0){ del = false; ri = (ri + 1) % roles.length; s = 300; }
+    setTimeout(tick, s);
+  }
+  if (rm) ty.textContent = roles[0]; else tick();
+
+  $$("[data-n]").forEach(function(n){
+    var to = +n.dataset.n, dec = n.dataset.n.indexOf(".") > -1, t0 = null;
+    function f(t){ t0 = t0 || t; var p = Math.min((t - t0) / 1200, 1); n.textContent = (to * p).toFixed(dec ? 1 : 0); if (p < 1) requestAnimationFrame(f); }
+    if (rm) n.textContent = to; else requestAnimationFrame(f);
+  });
+
+  var mt = $(".mq-t"); mt.innerHTML += mt.innerHTML;
+
+  var ST = {"Languages":["Java 11","SQL","JavaScript","HTML","CSS"],
+    "Frameworks":["Spring Boot","Spring MVC","Spring Data JPA","Hibernate","Spring Batch","Spring Tiles","Java EE","Jakarta EE","Struts2","DWR","EHCache","Bootstrap","jQuery"],
+    "Databases":["MySQL","PostgreSQL","IBM DB2"],
+    "Cloud & DevOps":["AWS S3","AWS SES","Docker","Azure Repos","Azure DevOps"],
+    "APIs & Security":["RESTful APIs","OAuth 2.0","JJWT"],
+    "Testing":["JUnit","Mockito","Postman"],
+    "Reporting & Visualization":["Jaspersoft Studio","Apache ECharts"],
+    "Version Control":["Git","TortoiseSVN"],
+    "Methodologies":["Agile","Waterfall","Jira"]};
+  var tb = $("#tabs"), pl = $("#pills");
+  function show(k){
+    $$("#tabs button").forEach(function(b){ b.setAttribute("aria-pressed", String(b.textContent === k)); });
+    pl.innerHTML = "";
+    ST[k].forEach(function(x, i){ var e = d.createElement("span"); e.className = "pill"; e.textContent = x; e.style.animationDelay = i * 40 + "ms"; pl.appendChild(e); });
+  }
+  Object.keys(ST).forEach(function(k){ var b = d.createElement("button"); b.type = "button"; b.className = "tab"; b.textContent = k; b.onclick = function(){ show(k); }; tb.appendChild(b); });
+  show("Languages");
+
+  var CT = [["🎨","Drawing","Sketching first, like designing a schema before writing code."],
+    ["🖌️","Painting","Working in layers, like building features and refining the details."],
+    ["📖","Crafting recipes","A recipe is an algorithm: inputs, clear steps and a tested result."],
+    ["🍳","Cooking","Improvising under pressure, like debugging a production issue."],
+    ["🧁","Baking","Precision and patience, like a careful deployment."],
+    ["✂️","Art and craft projects","Making something from scratch, end to end, with full ownership."],
+    ["🌱","Gardening","Slow growth and regular care, like maintaining a healthy codebase."]];
+  var tg = $("#tiles");
+  CT.forEach(function(c){
+    var b = d.createElement("div"); b.className = "tile";
+    b.innerHTML = "<b>" + c[0] + "</b><strong>" + c[1] + "</strong><span>" + c[2] + "</span>";
+    tg.appendChild(b);
+  });
+
+  var RESUME = "JVBERi0xLjQKJZOMi54gUmVwb3J0TGFiIEdlbmVyYXRlZCBQREYgZG9jdW1lbnQgKG9wZW5zb3VyY2UpCjEgMCBvYmoKPDwKL0YxIDIgMCBSIC9GMiAzIDAgUiAvRjMgNSAwIFIKPj4KZW5kb2JqCjIgMCBvYmoKPDwKL0Jhc2VGb250IC9IZWx2ZXRpY2EgL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcgL05hbWUgL0YxIC9TdWJ0eXBlIC9UeXBlMSAvVHlwZSAvRm9udAo+PgplbmRvYmoKMyAwIG9iago8PAovQmFzZUZvbnQgL0hlbHZldGljYS1Cb2xkIC9FbmNvZGluZyAvV2luQW5zaUVuY29kaW5nIC9OYW1lIC9GMiAvU3VidHlwZSAvVHlwZTEgL1R5cGUgL0ZvbnQKPj4KZW5kb2JqCjQgMCBvYmoKPDwKL0EgPDwKL1MgL1VSSSAvVHlwZSAvQWN0aW9uIC9VUkkgKGh0dHBzOi8vd3d3LmxpbmtlZGluLmNvbS9pbi9qaW1pY2hhZWxhKQo+PiAvQm9yZGVyIFsgMCAwIDAgXSAvUmVjdCBbIDI0NS43MzE5IDc0OS41OTk0IDM1MC4wMjMxIDc2MC42Mzk0IF0gL1N1YnR5cGUgL0xpbmsgL1R5cGUgL0Fubm90Cj4+CmVuZG9iago1IDAgb2JqCjw8Ci9CYXNlRm9udCAvSGVsdmV0aWNhLU9ibGlxdWUgL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcgL05hbWUgL0YzIC9TdWJ0eXBlIC9UeXBlMSAvVHlwZSAvRm9udAo+PgplbmRvYmoKNiAwIG9iago8PAovQW5ub3RzIFsgNCAwIFIgXSAvQ29udGVudHMgMTEgMCBSIC9NZWRpYUJveCBbIDAgMCA1OTUuMjc1NiA4NDEuODg5OCBdIC9QYXJlbnQgMTAgMCBSIC9SZXNvdXJjZXMgPDwKL0ZvbnQgMSAwIFIgL1Byb2NTZXQgWyAvUERGIC9UZXh0IC9JbWFnZUIgL0ltYWdlQyAvSW1hZ2VJIF0KPj4gL1JvdGF0ZSAwIAogIC9UcmFucyA8PAoKPj4gL1R5cGUgL1BhZ2UKPj4KZW5kb2JqCjcgMCBvYmoKPDwKL0NvbnRlbnRzIDEyIDAgUiAvTWVkaWFCb3ggWyAwIDAgNTk1LjI3NTYgODQxLjg4OTggXSAvUGFyZW50IDEwIDAgUiAvUmVzb3VyY2VzIDw8Ci9Gb250IDEgMCBSIC9Qcm9jU2V0IFsgL1BERiAvVGV4dCAvSW1hZ2VCIC9JbWFnZUMgL0ltYWdlSSBdCj4+IC9Sb3RhdGUgMCAvVHJhbnMgPDwKCj4+IAogIC9UeXBlIC9QYWdlCj4+CmVuZG9iago4IDAgb2JqCjw8Ci9QYWdlTW9kZSAvVXNlTm9uZSAvUGFnZXMgMTAgMCBSIC9UeXBlIC9DYXRhbG9nCj4+CmVuZG9iago5IDAgb2JqCjw8Ci9BdXRob3IgKElzcmFlbGluIE1pY2hhZWxhIEpvc2VwaCkgL0NyZWF0aW9uRGF0ZSAoRDoyMDI2MTExNjA4MjYyMCswMCcwMCcpIC9DcmVhdG9yIChcKHVuc3BlY2lmaWVkXCkpIC9LZXl3b3JkcyAoKSAvTW9kRGF0ZSAoRDoyMDI2MTExNjA4MjYyMCswMCcwMCcpIC9Qcm9kdWNlciAoUmVwb3J0TGFiIFBERiBMaWJyYXJ5IC0gXChvcGVuc291cmNlXCkpIAogIC9TdWJqZWN0IChcKHVuc3BlY2lmaWVkXCkpIC9UaXRsZSAoSXNyYWVsaW4gTWljaGFlbGEgSm9zZXBoIC0gUmVzdW1lKSAvVHJhcHBlZCAvRmFsc2UKPj4KZW5kb2JqCjEwIDAgb2JqCjw8Ci9Db3VudCAyIC9LaWRzIFsgNiAwIFIgNyAwIFIgXSAvVHlwZSAvUGFnZXMKPj4KZW5kb2JqCjExIDAgb2JqCjw8Ci9GaWx0ZXIgWyAvQVNDSUk4NURlY29kZSAvRmxhdGVEZWNvZGUgXSAvTGVuZ3RoIDI3OTUKPj4Kc3RyZWFtCkdiITtlPkJBTj4mcTlTWWtiZyJRUTcwPEdnOEJRWGFsNTFkIiFsYCVqZC83T1VeOUFfYlhldDZwO18qNCJMPGk7L1NAWT86TCJXVlNhUTxicXMwLktkLixIJ3M3XU9vazsuQVdoPmtISGZgRFJkWlhKIlxfcUVfcDFMcDBUQHFfMDw+OEQ9bU5pJCRgTlVQaENjLVciZmNcLidcZHI3PyNMdThdbjFlS0o8Ylo2Li8iT2cwa2JabURLLFIna1JNZGFpQiY8QColRV8ySmElRXVRJWxwIipwTzgpZVM3RTxuPSVwSiYyRDohKzptSD9eWzlOVDkwN3A2YUVBI2ooPlxLNksuQ3BjLl5NZl87aEtqYnQqUXI7PHMiaFVcI1YkYCFpZVAlOSVeVWZUa0MscmBDblVmPS5bYkFRKm9fb2YyI2BDTyNVTig8Uz4oNz5RITVIKjdmQDRycEVaQ2tHa1xnQkgqIlFeK2dlNnE9PUtWT15gVT1rRDJWPj1nZDxcJC1dIj5HY1RraHBzbVtxTVpyb0FRJzcsJkhgWzE3JEJSRU0/ZDlLbnVjcSU+M14+dVBmKkxwN0YlOVRRPTVsLko7WmVuL2poOkhTRnBHOjsrSjFeKlxXZk1Xbj1uLSgoaDA7dCtvYSE6YF89JGQoY1l0JSksZTcwYjVoY0xpdSMwLyNtJy1PT2pkbVUtLWtGQUZnJSpLSDdIdFgkdWJHVCtvbk8sTzw/RDJAMEBTYFE+TTc5Oio3OGdDJipnT0BsLjJCQG1VZDEoZ0BOSio8KlNDWFg3aE0vMUpgbGZHWS4/IWpQXSVAQG0lb0VZLjQpJEJSOFVPZ2FjX0JAbmdXdVxqYGxoU2dNW2MvckwsSCw9Iig1NWxYU0dKJlguSmUmS0U1Y25nTVtNQ1g5VVprNkdNcyNxdTNkRkVLSFgsJEQqMWFtI0FDW09YRmRSU3E/VlBdQjRQKzxwb1BeWkNyYzMsNUw1LyZRJjxvXSZxNTVGWnROLSMiPElUOGlCYEAra19xX2xZVzArbEVoM29RJDVTJGFRS0cvc1stIUpKbi10UXEnOEhbOUtSNDchakQ9cl1EVGkwMV5zTGpnTDRTQFdPIy5QMSZwWDNEJG9nNElgVTNhb1s6RlJ0akBSQDdeU1NVNWwuTmFBUWBcaVNuYidMPmhTJ2llPW42T3RLWyFPdUBeYFFyMSwqSj0+P0ZscjJWQEQwL05gL1Arbz1EVyJfT2RtMjpYR11aLShNZlxLODczL2srbHFhOzwrUUFmTUw6czhHUyJyZzZyblM6Vj4+a3BnKl91MV0rUDdaWjk9MURtL09NRmVkIktVQDhbMWc9PzFjQGlML243c1VxQ2JAXWhHWVA+STA9MkUmcTM2JlpAKTNFNzwtcDVZWHNDTFV0LWYyOi9rNjJtK19OQmZyLmcwbU9jS0kjOGUyY1BVKSYuNTFVMDdIK000M28rOz5zJ24pPmdQUyxOcXVXTFliWiJxbm8yLiliQD9xVD9QOlZIImp0ZnVMVDtbIWZpPzYncEQ7bDs9RjRxYzdOIWM4ZTBdNnEjR1o6STIjRE1kWTJwIWY3Oi1XKUU6c3VYRSloO0ZlTD46WmAuS1ZjUSokKysuXExuXiRVcj43SStgRTVBTSdAJUstNXRCak5hXEc7NmY2XW5yZGB0IlwmNj0kR1djbSU6ZEs7VEM5Il91Sy5TdXVLKm4pSkNmVG5CSkFpXjU3LUIvYi0vPXUlKFYpMFg3NnEtLVVSZWkkbERDQ3FGbDY6c00nZFFqIy5vNFkyWkorXSs0W2MkLiQrU2IiYlNGLzteYU5KNkhzdEJUMzJXcUZINGlfayg+R0FbLTw4czhzPzBDcjgtWFxGLiJHXGZxLEdoWE46M1RlKildPGZaLGdRJ1w/SCw1TGU4L251L3AlRHVnKGMoNSssO2RdNCl0V2g8RHNeUm9kIzRyO1ZaTG9xTkxBYDxNZWhvZz9KL3UvWksqajBxRXAhYEgyJDlBQW46NSpNVVYyMTwiIzlMO10udW1uJV1PUTFXNmMkKS9SZ2NyNUY5b0w5VlddMEtfXnJCLkpMSSo6THUrU3M5VTBHWkBFYyQ1cDRAVHAwOz1NSUNvcDxtQ1g/RD89SWRxKGhILEkhQlNIR208a19bJSdwQmgmaGIqXVVNPFZqYS9CLmhJIyMla0gqKSMtIk1xQGxZXl1YJ3M8XkBfa1lmV1FBQzlVPGs9JF51bGM6VFhPMS9pJkheNVpwRy1IK0M3LGEnLVhRTCM5M2pWPUM3JmA7XyZAMDw5LFksLDopU2ZeUmdsa3VMM1JdaWBhOFtqSlgwJ0piTyVEJFBaM1pXVClKZm5SO1o7b2w7UHQkLXFARnM8V0ddRkozWWUja1dTaF5iZmNRWiZDLjtmZ21Va2tHc0g4TSJMbmZMTy9RV106LkRuJjRjR1lkTEpAVkIuYUNwRy5tOWYibStZNyc3ZipuQWVlViFHL0A/XV0zUjxRWy51Xks7cXM7cjlwUy5mVUlVMUQ1UCpOLTs1Oy10bl0yLGlySkNiJ2A4aHJtSmxpOWA4J21eKy0ucS9Kc1NMXzooYF02QyJNW2owNSxLZzlBa3MoYnFKYzRHSl4yPzxjaThPWmA6UVhsKXI+JTlvayZRZDYuP3I9ZDk7U2JoTDA8VmJCcGBoRi50KjxfP1RlNEEnS2teSCpcUkgrIVFFO3E5MnEsdGpBZkthdTVdaEJUOFZmbl9fVjFTJmsrTi8yWGd1c3ItbDs1c0xcSmllbUtmcTo7TklyJkNWMjwxJXJcR3RAR2Y0QzAmbSdTPlVoNyo6KTZfbm03blZSc0tUYXJ1ZlJdcm5MM0FLMkRrTnVfQzFLMWw1TG9xTD11TWRdNicwXG9mRHFibGdYaVkrUC1wI19UTCZjMjUkMVo8KjBQREkmbCE2KTc9OEonO3RLdDk8SGM2WlwsakY1ZktuLlNWKGpPZSE+bThITT4tXFkyLipEb2tuUzI6LFwiWi5UVy1vJE8kSSNjZ2A1UF9JMjklZEk1Tz1FPk5WUGouTCszSjpbajFTPEJVa0lTIzlwcWRBYFFbV0MkTnFPKnBmMEU3MTxXIjI6MSJUMVRtO1deLidYNmVhISVPS1FZN10tWjleaGBHRklkM2deQTEiQCctaFZbLzJuUG5aWkpJblA1P0EraXJaYUItbGEmZzA6OlA4WF9GT09YV0JDcS4/ZmhPY0ExLS8wQUYvUEJSJnJDJiJaTiNIWVAiWm5qLylMdWVILGxxQ0hvLCxGX2pEYmxMVCkoWjFnWklNLG8lQCRtITw+MU9ZcjRGXGNsUyNAZ2cyXy5qYUYvQ3RIR2Y6Ry8oQTJRQk1uSEZrJXFWMWgiTVFhVVYqN2QpOTVuQmwiNkk4RkxAVmBnVVVVRDlqOm9scSVTRF0hQEExZGAlM0R0ZjdZbVxCM1klPiNpNjheJlBSPjM8QV9ETWZjYjJnYFFdNCg9SG1BdWtLYihdbzwqLytVWCQyamk5L2FIQGE6L247VlBXL25ZOTZfXjEhOmJEUWlvLWZQTGZCU3NRMCpdPjlEIk4yKzFwMjIuMTEuI3Jhby51TT0jWUIwOk5dKiIsTC8xOkhbUnNwP0Y9M3RldSgzcGZNc1ArM08lcGE1cF5ibzw8JXFqOXRraiNxRShPSVk1NmBsNTRxLEspZ29xU29FLWNCRz1JMWpJZk9gSDc7KX4+ZW5kc3RyZWFtCmVuZG9iagoxMiAwIG9iago8PAovRmlsdGVyIFsgL0FTQ0lJODVEZWNvZGUgL0ZsYXRlRGVjb2RlIF0gL0xlbmd0aCAxNjUKPj4Kc3RyZWFtCkdhcTNeXyRcJTUmNEghX01FLl1YZzxDcyFcSS8jajdHJltuXy0xT1VnXSVOMTxnODBnX3AkRDkxYVxnbT4oTTw4R0BbcTVoUz1bRG9ScDkkYk9OJVpSM1Z0S2x1U21ILS5uai9gKGVKL2oqczU0PCVyTEAyWWkrP1pLWEQ7JDd1dCw6ZmN0aSl1QWc1S2pKTFlYSiQwZ2pvW2k7aTgxYzUsXWB+PmVuZHN0cmVhbQplbmRvYmoKeHJlZgowIDEzCjAwMDAwMDAwMDAgNjU1MzUgZiAKMDAwMDAwMDA2MSAwMDAwMCBuIAowMDAwMDAwMTEyIDAwMDAwIG4gCjAwMDAwMDAyMTkgMDAwMDAgbiAKMDAwMDAwMDMzMSAwMDAwMCBuIAowMDAwMDAwNTIxIDAwMDAwIG4gCjAwMDAwMDA2MzYgMDAwMDAgbiAKMDAwMDAwMDg1OSAwMDAwMCBuIAowMDAwMDAxMDY0IDAwMDAwIG4gCjAwMDAwMDExMzMgMDAwMDAgbiAKMDAwMDAwMTQ0NCAwMDAwMCBuIAowMDAwMDAxNTEwIDAwMDAwIG4gCjAwMDAwMDQzOTcgMDAwMDAgbiAKdHJhaWxlcgo8PAovSUQgCls8NzExN2JjMmM5MzgxNDA3YWJlYmU5YmU1NjczZGVkNTA+PDcxMTdiYzJjOTM4MTQwN2FiZWJlOWJlNTY3M2RlZDUwPl0KJSBSZXBvcnRMYWIgZ2VuZXJhdGVkIFBERiBkb2N1bWVudCAtLSBkaWdlc3QgKG9wZW5zb3VyY2UpCgovSW5mbyA5IDAgUgovUm9vdCA4IDAgUgovU2l6ZSAxMwo+PgpzdGFydHhyZWYKNDY1MwolJUVPRgo=";
+  $$("[data-resume]").forEach(function(a){ a.href = "data:application/pdf;base64," + RESUME; });
+
+  // Chat: optional backend URL (POST {question} -> {answer}, CORS enabled for your site).
+  var API_URL = "";
+  var KB = [
+    {k:["skill","tech","stack","java","spring","hibernate","sql"], a:"I have 4+ years of enterprise Java experience: Java 11, Spring Boot, Spring MVC, Spring Data JPA, Hibernate and SQL on MySQL, PostgreSQL and IBM DB2."},
+    {k:["project","repo","github","built","portfolio"], a:"My GitHub has a Spring Boot JPA relationship mappings API, a JSP and Servlet employee CRUD app, and a UI webpage project. See Selected work above."},
+    {k:["education","degree","mca","college","award","certif","speak"], a:"I hold an MCA from Mepco Schlenk Engineering College (2017 to 2019), won the Superstar Q3 2022 award at Capestart, completed an NPTEL Elite cloud computing certification, and speak English and Tamil."},
+    {k:["experience","worked","job","role","capestart","nic","company"], a:"I worked as a Software Engineer at Capestart (2022 to 2023), a Full Stack Developer at NICSI, NIC (2019 to 2022) and a Software Developer Intern at NIC (2018 to 2019)."},
+    {k:["break","gap","relocat","away","return"], a:"I’ve been on a career break since May 2023 because of a relocation. I’m rebuilding momentum with AI projects in Java."},
+    {k:["langchain","mcp","llm","rag","agent","ai "], a:"I’m building a RAG chatbot with LangChain4j and a Java MCP server. They’re in progress and will be linked on this page."},
+    {k:["creative","draw","paint","cook","bake","garden","craft","art"], a:"Outside code I draw, paint, cook, bake, garden and make crafts. I treat creativity and engineering as one skill set."},
+    {k:["cloud","devops","aws","docker","azure"], a:"I’ve worked with AWS (S3, SES), Docker, Azure Repos and Azure DevOps."},
+    {k:["api","security","oauth","jwt","rest"], a:"I build RESTful APIs with OAuth 2.0 and JJWT, and I’ve done vulnerability assessments and security defect remediation."},
+    {k:["test","junit","mockito","postman"], a:"I test with JUnit, Mockito and Postman."},
+    {k:["team","personality","collaborat","communicat","strength"], a:"I’m a fast learner and a creative thinker who takes ownership, collaborates across functions and communicates well with stakeholders."},
+    {k:["contact","email","hire","available","reach"], a:"I’m open to roles and collaborations. Use the Say hi section below to email me."}
+  ];
+  var CH = ["What are your main skills?","Tell me about your experience","Why the career break?","What do you make outside code?"];
+  var FB = "I don’t have an answer for that yet. Try asking about my skills, experience, AI projects or creative work.";
+  var lg = $("#log"), qi = $("#q");
+  function add(t, w){ var m = d.createElement("div"); m.className = "msg " + w; m.textContent = t; lg.appendChild(m); lg.scrollTop = lg.scrollHeight; return m; }
+  function loc(q){
+    q = q.toLowerCase() + " "; var b = null, bs = 0;
+    KB.forEach(function(e){ var s = 0; e.k.forEach(function(w){ if (q.indexOf(w) > -1) s++; }); if (s > bs){ bs = s; b = e; } });
+    return b ? b.a : FB;
+  }
+  async function ans(q){
+    if (API_URL){ try { var r = await fetch(API_URL, {method:"POST", headers:{"Content-Type":"application/json"}, body:JSON.stringify({question:q})}), j = await r.json(); if (j && j.answer) return j.answer; } catch (e) {} }
+    return loc(q);
+  }
+  async function ask(q){
+    q = (q || "").trim(); if (!q) return;
+    add(q, "me"); qi.value = "";
+    var w = add("Thinking…", "bot"), a = await ans(q);
+    setTimeout(function(){ w.textContent = a; lg.scrollTop = lg.scrollHeight; }, 350);
+  }
+  CH.forEach(function(c){ var b = d.createElement("button"); b.type = "button"; b.className = "cq"; b.textContent = c; b.onclick = function(){ ask(c); }; $("#chips").appendChild(b); });
+  $("#send").onclick = function(){ ask(qi.value); };
+  qi.addEventListener("keydown", function(e){ if (e.key === "Enter") ask(qi.value); });
+})();
+</script>
+</body>
+</html>
