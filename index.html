@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Israelin Michaela, Java and Spring Boot backend engineer with 4.5 years of experience, open to full-time roles.">
 <title>Israelin Michaela | Java Engineer and Maker</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -79,6 +80,8 @@ details ul{margin:0;padding:.5rem 1.2rem 1rem 2.4rem;color:var(--muted)}
 .cq{padding:.3rem .8rem;border-radius:999px;font-size:.78rem}
 .row{display:flex;gap:.5rem}
 .row input{flex:1;min-width:0;font:inherit;padding:.7rem .9rem;border-radius:var(--rad);border:1px solid var(--line);background:var(--bg);color:var(--ink)}
+.badge{align-self:flex-start;display:inline-flex;align-items:center;gap:.4rem;font:600 .72rem var(--mono);color:var(--ac);border:1px solid var(--ac);border-radius:999px;padding:.05rem .6rem}
+.badge i{width:.45rem;height:.45rem;border-radius:50%;background:var(--ac);animation:pulse 1.4s infinite}
 .contact p{color:var(--muted)}
 footer{padding:3rem 0;color:var(--muted);font:.8rem var(--mono)}
 #education .card{position:relative;padding-top:1.9rem;box-shadow:0 10px 16px -8px rgba(0,0,0,.4);transform:rotate(var(--t,-1.2deg));transition:transform .25s}
@@ -104,7 +107,7 @@ footer{padding:3rem 0;color:var(--muted);font:.8rem var(--mono)}
       <p class="lead">Java backend engineer with 4.5 years of experience, and a maker at heart. I draw, paint, cook, bake, and garden. I enjoy experimenting new things. I’m looking for a full-time Java and Spring Boot backend or full-stack role. This page shows both sides of me and how they work together. Try the switch at the top.</p>
       <div class="btns"><a class="btn p" href="#work">See my work</a><a class="btn" href="#contact">Hire me</a><a class="btn" href="#" data-resume download="Israelin_Michaela_Resume.pdf">Download resume ⬇</a></div>
       <div class="stats">
-        <div><strong><span data-n="4.5">0</span>+</strong><small>years in Java</small></div>
+        <div><strong><span data-n="4.5">0</span></strong><small>years in Java</small></div>
         <div><strong><span data-n="3">0</span></strong><small>engineering roles</small></div>
         <div><strong><span data-n="7">0</span></strong><small>creative crafts</small></div>
       </div>
@@ -127,7 +130,8 @@ footer{padding:3rem 0;color:var(--muted);font:.8rem var(--mono)}
     <section id="experience" class="rv">
       <h2>Where I’ve been</h2>
       <details open><summary>Career break: Relocation <small>May 2023 – present</small></summary>
-        <ul><li>Relocated, and now upskilling with AI: Diving deep into modern Java internals alongside event-driven architecture with microservices and Kafka. Separately, I'm building and integrating AI chatbots right here on my portfolio using LangChain4j and MCP.</li></ul></details>
+        <ul><li>Relocated, and now upskilling with AI: Diving deep into modern Java internals alongside distributed, event-driven architecture with microservices and Kafka.</li>
+          <li>Learning by building: a RAG chatbot with LangChain4j, and next, a Java MCP server that gives AI clients live access to my GitHub projects and a safe way to contact me.</li></ul></details>
       <details><summary>Software Engineer, Capestart <small>Mar 2022 – Apr 2023</small></summary>
         <ul><li>Built and enhanced backend services for a light commercial product selection application.</li>
         <li>Supported application modernization: code and database analysis, migration and API lifecycle management.</li>
@@ -165,7 +169,8 @@ footer{padding:3rem 0;color:var(--muted);font:.8rem var(--mono)}
     <section id="work" class="rv">
       <h2>Selected work</h2>
       <div class="works">
-	    <article class="card"><h3>digi-content</h3><p>Production-style digital billing and subscription platform built with Java 27 and Spring Boot, exploring microservices, event-driven architecture, resilience, and distributed systems.</p><div class="tags"><span>Java</span><span>Spring Boot</span><span>Microservices</span><span>Kafka</span></div><a href="https://github.com/JIMichaela18/digi-content">View on GitHub</a></article>
+        <article class="card"><h3>portfolio-chatbot</h3><p>A Spring Boot and LangChain4j chatbot that answers questions about me from a knowledge file (RAG), built to power the Ask Israelin chat on this portfolio.</p><div class="tags"><span>Java</span><span>Spring Boot</span><span>LangChain4j</span><span>RAG</span></div><a href="https://github.com/JIMichaela18/portfolio-chatbot">View on GitHub</a></article>
+        <article class="card"><h3>digi-content</h3><span class="badge"><i></i>In progress</span><p>Production-style digital billing and subscription platform built with Java 27 and Spring Boot, exploring microservices, event-driven architecture, resilience, and distributed systems.</p><div class="tags"><span>Java</span><span>Spring Boot</span><span>Microservices</span><span>Kafka</span></div><a href="https://github.com/JIMichaela18/digi-content">View on GitHub</a></article>
         <article class="card"><h3>spring-boot-jpa-relationship-mappings</h3><p>A Spring Boot and Spring Data JPA project demonstrating relational mapping annotations (@OneToOne, @OneToMany, @ManyToOne, @ManyToMany) through a RESTful API.</p><div class="tags"><span>Java</span><span>Spring Boot</span><span>JPA</span></div><a href="https://github.com/JIMichaela18/spring-boot-jpa-relationship-mappings">View on GitHub</a></article>
         <article class="card"><h3>jsp-servlet-crud-employee-details</h3><p>A legacy Java web application with complete CRUD for employee records, using JSP, Servlets, JDBC and MySQL.</p><div class="tags"><span>Java</span><span>JSP</span><span>Servlets</span><span>JDBC</span><span>MySQL</span></div><a href="https://github.com/JIMichaela18/jsp-servlet-crud-employee-details">View on GitHub</a></article>
       </div>
@@ -206,7 +211,7 @@ footer{padding:3rem 0;color:var(--muted);font:.8rem var(--mono)}
   var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } }); }, {threshold:.12});
   $$(".rv").forEach(function(n){ io.observe(n); });
 
-  var roles = ["Java Backend Engineer","Full Stack Developer", "Spring Boot Developer","Cook, Painter, Gardener","Curious builder"], ri = 0, ci = 0, del = false, ty = $("#type");
+  var roles = ["Java Backend Engineer","Full Stack Developer","Spring Boot Developer","Cook, Painter, Gardener","Curious builder"], ri = 0, ci = 0, del = false, ty = $("#type");
   function tick(){
     var w = roles[ri]; ci += del ? -1 : 1; ty.textContent = w.slice(0, ci);
     var s = del ? 30 : 70;
@@ -255,14 +260,15 @@ footer{padding:3rem 0;color:var(--muted);font:.8rem var(--mono)}
     tg.appendChild(b);
   });
 
-  var RESUME = "JVBERi0xLjQKJZOMi54gUmVwb3J0TGFiIEdlbmVyYXRlZCBQREYgZG9jdW1lbnQgKG9wZW5zb3VyY2UpCjEgMCBvYmoKPDwKL0YxIDIgMCBSIC9GMiAzIDAgUiAvRjMgNSAwIFIKPj4KZW5kb2JqCjIgMCBvYmoKPDwKL0Jhc2VGb250IC9IZWx2ZXRpY2EgL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcgL05hbWUgL0YxIC9TdWJ0eXBlIC9UeXBlMSAvVHlwZSAvRm9udAo+PgplbmRvYmoKMyAwIG9iago8PAovQmFzZUZvbnQgL0hlbHZldGljYS1Cb2xkIC9FbmNvZGluZyAvV2luQW5zaUVuY29kaW5nIC9OYW1lIC9GMiAvU3VidHlwZSAvVHlwZTEgL1R5cGUgL0ZvbnQKPj4KZW5kb2JqCjQgMCBvYmoKPDwKL0EgPDwKL1MgL1VSSSAvVHlwZSAvQWN0aW9uIC9VUkkgKGh0dHBzOi8vd3d3LmxpbmtlZGluLmNvbS9pbi9qaW1pY2hhZWxhKQo+PiAvQm9yZGVyIFsgMCAwIDAgXSAvUmVjdCBbIDI0NS43MzE5IDc0OS41OTk0IDM1MC4wMjMxIDc2MC42Mzk0IF0gL1N1YnR5cGUgL0xpbmsgL1R5cGUgL0Fubm90Cj4+CmVuZG9iago1IDAgb2JqCjw8Ci9CYXNlRm9udCAvSGVsdmV0aWNhLU9ibGlxdWUgL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcgL05hbWUgL0YzIC9TdWJ0eXBlIC9UeXBlMSAvVHlwZSAvRm9udAo+PgplbmRvYmoKNiAwIG9iago8PAovQW5ub3RzIFsgNCAwIFIgXSAvQ29udGVudHMgMTEgMCBSIC9NZWRpYUJveCBbIDAgMCA1OTUuMjc1NiA4NDEuODg5OCBdIC9QYXJlbnQgMTAgMCBSIC9SZXNvdXJjZXMgPDwKL0ZvbnQgMSAwIFIgL1Byb2NTZXQgWyAvUERGIC9UZXh0IC9JbWFnZUIgL0ltYWdlQyAvSW1hZ2VJIF0KPj4gL1JvdGF0ZSAwIAogIC9UcmFucyA8PAoKPj4gL1R5cGUgL1BhZ2UKPj4KZW5kb2JqCjcgMCBvYmoKPDwKL0NvbnRlbnRzIDEyIDAgUiAvTWVkaWFCb3ggWyAwIDAgNTk1LjI3NTYgODQxLjg4OTggXSAvUGFyZW50IDEwIDAgUiAvUmVzb3VyY2VzIDw8Ci9Gb250IDEgMCBSIC9Qcm9jU2V0IFsgL1BERiAvVGV4dCAvSW1hZ2VCIC9JbWFnZUMgL0ltYWdlSSBdCj4+IC9Sb3RhdGUgMCAvVHJhbnMgPDwKCj4+IAogIC9UeXBlIC9QYWdlCj4+CmVuZG9iago4IDAgb2JqCjw8Ci9QYWdlTW9kZSAvVXNlTm9uZSAvUGFnZXMgMTAgMCBSIC9UeXBlIC9DYXRhbG9nCj4+CmVuZG9iago5IDAgb2JqCjw8Ci9BdXRob3IgKElzcmFlbGluIE1pY2hhZWxhIEpvc2VwaCkgL0NyZWF0aW9uRGF0ZSAoRDoyMDI2MTExNjA4MjYyMCswMCcwMCcpIC9DcmVhdG9yIChcKHVuc3BlY2lmaWVkXCkpIC9LZXl3b3JkcyAoKSAvTW9kRGF0ZSAoRDoyMDI2MTExNjA4MjYyMCswMCcwMCcpIC9Qcm9kdWNlciAoUmVwb3J0TGFiIFBERiBMaWJyYXJ5IC0gXChvcGVuc291cmNlXCkpIAogIC9TdWJqZWN0IChcKHVuc3BlY2lmaWVkXCkpIC9UaXRsZSAoSXNyYWVsaW4gTWljaGFlbGEgSm9zZXBoIC0gUmVzdW1lKSAvVHJhcHBlZCAvRmFsc2UKPj4KZW5kb2JqCjEwIDAgb2JqCjw8Ci9Db3VudCAyIC9LaWRzIFsgNiAwIFIgNyAwIFIgXSAvVHlwZSAvUGFnZXMKPj4KZW5kb2JqCjExIDAgb2JqCjw8Ci9GaWx0ZXIgWyAvQVNDSUk4NURlY29kZSAvRmxhdGVEZWNvZGUgXSAvTGVuZ3RoIDI3OTUKPj4Kc3RyZWFtCkdiITtlPkJBTj4mcTlTWWtiZyJRUTcwPEdnOEJRWGFsNTFkIiFsYCVqZC83T1VeOUFfYlhldDZwO18qNCJMPGk7L1NAWT86TCJXVlNhUTxicXMwLktkLixIJ3M3XU9vazsuQVdoPmtISGZgRFJkWlhKIlxfcUVfcDFMcDBUQHFfMDw+OEQ9bU5pJCRgTlVQaENjLVciZmNcLidcZHI3PyNMdThdbjFlS0o8Ylo2Li8iT2cwa2JabURLLFIna1JNZGFpQiY8QColRV8ySmElRXVRJWxwIipwTzgpZVM3RTxuPSVwSiYyRDohKzptSD9eWzlOVDkwN3A2YUVBI2ooPlxLNksuQ3BjLl5NZl87aEtqYnQqUXI7PHMiaFVcI1YkYCFpZVAlOSVeVWZUa0MscmBDblVmPS5bYkFRKm9fb2YyI2BDTyNVTig8Uz4oNz5RITVIKjdmQDRycEVaQ2tHa1xnQkgqIlFeK2dlNnE9PUtWT15gVT1rRDJWPj1nZDxcJC1dIj5HY1RraHBzbVtxTVpyb0FRJzcsJkhgWzE3JEJSRU0/ZDlLbnVjcSU+M14+dVBmKkxwN0YlOVRRPTVsLko7WmVuL2poOkhTRnBHOjsrSjFeKlxXZk1Xbj1uLSgoaDA7dCtvYSE6YF89JGQoY1l0JSksZTcwYjVoY0xpdSMwLyNtJy1PT2pkbVUtLWtGQUZnJSpLSDdIdFgkdWJHVCtvbk8sTzw/RDJAMEBTYFE+TTc5Oio3OGdDJipnT0BsLjJCQG1VZDEoZ0BOSio8KlNDWFg3aE0vMUpgbGZHWS4/IWpQXSVAQG0lb0VZLjQpJEJSOFVPZ2FjX0JAbmdXdVxqYGxoU2dNW2MvckwsSCw9Iig1NWxYU0dKJlguSmUmS0U1Y25nTVtNQ1g5VVprNkdNcyNxdTNkRkVLSFgsJEQqMWFtI0FDW09YRmRSU3E/VlBdQjRQKzxwb1BeWkNyYzMsNUw1LyZRJjxvXSZxNTVGWnROLSMiPElUOGlCYEAra19xX2xZVzArbEVoM29RJDVTJGFRS0cvc1stIUpKbi10UXEnOEhbOUtSNDchakQ9cl1EVGkwMV5zTGpnTDRTQFdPIy5QMSZwWDNEJG9nNElgVTNhb1s6RlJ0akBSQDdeU1NVNWwuTmFBUWBcaVNuYidMPmhTJ2llPW42T3RLWyFPdUBeYFFyMSwqSj0+P0ZscjJWQEQwL05gL1Arbz1EVyJfT2RtMjpYR11aLShNZlxLODczL2srbHFhOzwrUUFmTUw6czhHUyJyZzZyblM6Vj4+a3BnKl91MV0rUDdaWjk9MURtL09NRmVkIktVQDhbMWc9PzFjQGlML243c1VxQ2JAXWhHWVA+STA9MkUmcTM2JlpAKTNFNzwtcDVZWHNDTFV0LWYyOi9rNjJtK19OQmZyLmcwbU9jS0kjOGUyY1BVKSYuNTFVMDdIK000M28rOz5zJ24pPmdQUyxOcXVXTFliWiJxbm8yLiliQD9xVD9QOlZIImp0ZnVMVDtbIWZpPzYncEQ7bDs9RjRxYzdOIWM4ZTBdNnEjR1o6STIjRE1kWTJwIWY3Oi1XKUU6c3VYRSloO0ZlTD46WmAuS1ZjUSokKysuXExuXiRVcj43SStgRTVBTSdAJUstNXRCak5hXEc7NmY2XW5yZGB0IlwmNj0kR1djbSU6ZEs7VEM5Il91Sy5TdXVLKm4pSkNmVG5CSkFpXjU3LUIvYi0vPXUlKFYpMFg3NnEtLVVSZWkkbERDQ3FGbDY6c00nZFFqIy5vNFkyWkorXSs0W2MkLiQrU2IiYlNGLzteYU5KNkhzdEJUMzJXcUZINGlfayg+R0FbLTw4czhzPzBDcjgtWFxGLiJHXGZxLEdoWE46M1RlKildPGZaLGdRJ1w/SCw1TGU4L251L3AlRHVnKGMoNSssO2RdNCl0V2g8RHNeUm9kIzRyO1ZaTG9xTkxBYDxNZWhvZz9KL3UvWksqajBxRXAhYEgyJDlBQW46NSpNVVYyMTwiIzlMO10udW1uJV1PUTFXNmMkKS9SZ2NyNUY5b0w5VlddMEtfXnJCLkpMSSo6THUrU3M5VTBHWkBFYyQ1cDRAVHAwOz1NSUNvcDxtQ1g/RD89SWRxKGhILEkhQlNIR208a19bJSdwQmgmaGIqXVVNPFZqYS9CLmhJIyMla0gqKSMtIk1xQGxZXl1YJ3M8XkBfa1lmV1FBQzlVPGs9JF51bGM6VFhPMS9pJkheNVpwRy1IK0M3LGEnLVhRTCM5M2pWPUM3JmA7XyZAMDw5LFksLDopU2ZeUmdsa3VMM1JdaWBhOFtqSlgwJ0piTyVEJFBaM1pXVClKZm5SO1o7b2w7UHQkLXFARnM8V0ddRkozWWUja1dTaF5iZmNRWiZDLjtmZ21Va2tHc0g4TSJMbmZMTy9RV106LkRuJjRjR1lkTEpAVkIuYUNwRy5tOWYibStZNyc3ZipuQWVlViFHL0A/XV0zUjxRWy51Xks7cXM7cjlwUy5mVUlVMUQ1UCpOLTs1Oy10bl0yLGlySkNiJ2A4aHJtSmxpOWA4J21eKy0ucS9Kc1NMXzooYF02QyJNW2owNSxLZzlBa3MoYnFKYzRHSl4yPzxjaThPWmA6UVhsKXI+JTlvayZRZDYuP3I9ZDk7U2JoTDA8VmJCcGBoRi50KjxfP1RlNEEnS2teSCpcUkgrIVFFO3E5MnEsdGpBZkthdTVdaEJUOFZmbl9fVjFTJmsrTi8yWGd1c3ItbDs1c0xcSmllbUtmcTo7TklyJkNWMjwxJXJcR3RAR2Y0QzAmbSdTPlVoNyo6KTZfbm03blZSc0tUYXJ1ZlJdcm5MM0FLMkRrTnVfQzFLMWw1TG9xTD11TWRdNicwXG9mRHFibGdYaVkrUC1wI19UTCZjMjUkMVo8KjBQREkmbCE2KTc9OEonO3RLdDk8SGM2WlwsakY1ZktuLlNWKGpPZSE+bThITT4tXFkyLipEb2tuUzI6LFwiWi5UVy1vJE8kSSNjZ2A1UF9JMjklZEk1Tz1FPk5WUGouTCszSjpbajFTPEJVa0lTIzlwcWRBYFFbV0MkTnFPKnBmMEU3MTxXIjI6MSJUMVRtO1deLidYNmVhISVPS1FZN10tWjleaGBHRklkM2deQTEiQCctaFZbLzJuUG5aWkpJblA1P0EraXJaYUItbGEmZzA6OlA4WF9GT09YV0JDcS4/ZmhPY0ExLS8wQUYvUEJSJnJDJiJaTiNIWVAiWm5qLylMdWVILGxxQ0hvLCxGX2pEYmxMVCkoWjFnWklNLG8lQCRtITw+MU9ZcjRGXGNsUyNAZ2cyXy5qYUYvQ3RIR2Y6Ry8oQTJRQk1uSEZrJXFWMWgiTVFhVVYqN2QpOTVuQmwiNkk4RkxAVmBnVVVVRDlqOm9scSVTRF0hQEExZGAlM0R0ZjdZbVxCM1klPiNpNjheJlBSPjM8QV9ETWZjYjJnYFFdNCg9SG1BdWtLYihdbzwqLytVWCQyamk5L2FIQGE6L247VlBXL25ZOTZfXjEhOmJEUWlvLWZQTGZCU3NRMCpdPjlEIk4yKzFwMjIuMTEuI3Jhby51TT0jWUIwOk5dKiIsTC8xOkhbUnNwP0Y9M3RldSgzcGZNc1ArM08lcGE1cF5ibzw8JXFqOXRraiNxRShPSVk1NmBsNTRxLEspZ29xU29FLWNCRz1JMWpJZk9gSDc7KX4+ZW5kc3RyZWFtCmVuZG9iagoxMiAwIG9iago8PAovRmlsdGVyIFsgL0FTQ0lJODVEZWNvZGUgL0ZsYXRlRGVjb2RlIF0gL0xlbmd0aCAxNjUKPj4Kc3RyZWFtCkdhcTNeXyRcJTUmNEghX01FLl1YZzxDcyFcSS8jajdHJltuXy0xT1VnXSVOMTxnODBnX3AkRDkxYVxnbT4oTTw4R0BbcTVoUz1bRG9ScDkkYk9OJVpSM1Z0S2x1U21ILS5uai9gKGVKL2oqczU0PCVyTEAyWWkrP1pLWEQ7JDd1dCw6ZmN0aSl1QWc1S2pKTFlYSiQwZ2pvW2k7aTgxYzUsXWB+PmVuZHN0cmVhbQplbmRvYmoKeHJlZgowIDEzCjAwMDAwMDAwMDAgNjU1MzUgZiAKMDAwMDAwMDA2MSAwMDAwMCBuIAowMDAwMDAwMTEyIDAwMDAwIG4gCjAwMDAwMDAyMTkgMDAwMDAgbiAKMDAwMDAwMDMzMSAwMDAwMCBuIAowMDAwMDAwNTIxIDAwMDAwIG4gCjAwMDAwMDA2MzYgMDAwMDAgbiAKMDAwMDAwMDg1OSAwMDAwMCBuIAowMDAwMDAxMDY0IDAwMDAwIG4gCjAwMDAwMDExMzMgMDAwMDAgbiAKMDAwMDAwMTQ0NCAwMDAwMCBuIAowMDAwMDAxNTEwIDAwMDAwIG4gCjAwMDAwMDQzOTcgMDAwMDAgbiAKdHJhaWxlcgo8PAovSUQgCls8NzExN2JjMmM5MzgxNDA3YWJlYmU5YmU1NjczZGVkNTA+PDcxMTdiYzJjOTM4MTQwN2FiZWJlOWJlNTY3M2RlZDUwPl0KJSBSZXBvcnRMYWIgZ2VuZXJhdGVkIFBERiBkb2N1bWVudCAtLSBkaWdlc3QgKG9wZW5zb3VyY2UpCgovSW5mbyA5IDAgUgovUm9vdCA4IDAgUgovU2l6ZSAxMwo+PgpzdGFydHhyZWYKNDY1MwolJUVPRgo=";
+  var RESUME = "JVBERi0xLjQKJZOMi54gUmVwb3J0TGFiIEdlbmVyYXRlZCBQREYgZG9jdW1lbnQgKG9wZW5zb3VyY2UpCjEgMCBvYmoKPDwKL0YxIDIgMCBSIC9GMiAzIDAgUiAvRjMgNSAwIFIKPj4KZW5kb2JqCjIgMCBvYmoKPDwKL0Jhc2VGb250IC9IZWx2ZXRpY2EgL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcgL05hbWUgL0YxIC9TdWJ0eXBlIC9UeXBlMSAvVHlwZSAvRm9udAo+PgplbmRvYmoKMyAwIG9iago8PAovQmFzZUZvbnQgL0hlbHZldGljYS1Cb2xkIC9FbmNvZGluZyAvV2luQW5zaUVuY29kaW5nIC9OYW1lIC9GMiAvU3VidHlwZSAvVHlwZTEgL1R5cGUgL0ZvbnQKPj4KZW5kb2JqCjQgMCBvYmoKPDwKL0EgPDwKL1MgL1VSSSAvVHlwZSAvQWN0aW9uIC9VUkkgKGh0dHBzOi8vd3d3LmxpbmtlZGluLmNvbS9pbi9pc3JhZWxpbi1taWNoYWVsYS1qb3NlcGgtYjA4ODI0MWIwLykKPj4gL0JvcmRlciBbIDAgMCAwIF0gL1JlY3QgWyAxNTguMTg1IDc2Mi4yMjMzIDM2NS4yNTcgNzczLjAyMzMgXSAvU3VidHlwZSAvTGluayAvVHlwZSAvQW5ub3QKPj4KZW5kb2JqCjUgMCBvYmoKPDwKL0Jhc2VGb250IC9IZWx2ZXRpY2EtT2JsaXF1ZSAvRW5jb2RpbmcgL1dpbkFuc2lFbmNvZGluZyAvTmFtZSAvRjMgL1N1YnR5cGUgL1R5cGUxIC9UeXBlIC9Gb250Cj4+CmVuZG9iago2IDAgb2JqCjw8Ci9Bbm5vdHMgWyA0IDAgUiBdIC9Db250ZW50cyAxMCAwIFIgL01lZGlhQm94IFsgMCAwIDU5NS4yNzU2IDg0MS44ODk4IF0gL1BhcmVudCA5IDAgUiAvUmVzb3VyY2VzIDw8Ci9Gb250IDEgMCBSIC9Qcm9jU2V0IFsgL1BERiAvVGV4dCAvSW1hZ2VCIC9JbWFnZUMgL0ltYWdlSSBdCj4+IC9Sb3RhdGUgMCAKICAvVHJhbnMgPDwKCj4+IC9UeXBlIC9QYWdlCj4+CmVuZG9iago3IDAgb2JqCjw8Ci9QYWdlTW9kZSAvVXNlTm9uZSAvUGFnZXMgOSAwIFIgL1R5cGUgL0NhdGFsb2cKPj4KZW5kb2JqCjggMCBvYmoKPDwKL0F1dGhvciAoSXNyYWVsaW4gTWljaGFlbGEgSm9zZXBoKSAvQ3JlYXRpb25EYXRlIChEOjIwMjYxMTE3MDk0ODM4KzAwJzAwJykgL0NyZWF0b3IgKFwodW5zcGVjaWZpZWRcKSkgL0tleXdvcmRzICgpIC9Nb2REYXRlIChEOjIwMjYxMTE3MDk0ODM4KzAwJzAwJykgL1Byb2R1Y2VyIChSZXBvcnRMYWIgUERGIExpYnJhcnkgLSBcKG9wZW5zb3VyY2VcKSkgCiAgL1N1YmplY3QgKFwodW5zcGVjaWZpZWRcKSkgL1RpdGxlIChJc3JhZWxpbiBNaWNoYWVsYSBKb3NlcGggLSBSZXN1bWUpIC9UcmFwcGVkIC9GYWxzZQo+PgplbmRvYmoKOSAwIG9iago8PAovQ291bnQgMSAvS2lkcyBbIDYgMCBSIF0gL1R5cGUgL1BhZ2VzCj4+CmVuZG9iagoxMCAwIG9iago8PAovRmlsdGVyIFsgL0FTQ0lJODVEZWNvZGUgL0ZsYXRlRGVjb2RlIF0gL0xlbmd0aCAyODU3Cj4+CnN0cmVhbQpHYiE7Zj5CQU4+JnE4MDFrYmciRiRTL2ZAY0k5VXNBRlVTbSE+OyMnamQvN0FkX3E7PFI/QCElZyluJ20nJC5xRz1QaCJzaFJHJkhjaC1ra2xgWVhoNWZaKmFwdHEsNWM9WlMpVUItKVVaUiRIc0IjRXNKTDlsKl1oXGhuQkQrQVlvTmMlNG5rQGZsbT1uaiIkZWRVQyFvaDlUbVJZS2pLK0crZXNWR1UmdF8oPFNUOUpBUmRLa1tPbjouQSttKVIwRmJiUmE2Jl5dZyZdJUgjKGkpcEViMiZxJV42LTdRTzdWT05oYmBUL3BqW2MrY0MlbERiYW5TQ3UuIjI/OGdfNnJRcztsblFzUzVQZSk/WTBnOjpgKE1bOS4xTixgLFA2Xkk0Tj1fPlw1XixyJkRFWlpybTY3U1xgRSwoMm0vXG9fb2ZKS0xNP1VkNk5DNi1cJUc7Yy9tbmFfWy5nY1NoPS0+XkFicDIlckEkKmUqWlkmaFszKU1jPzIiITEiVFZcZWpkXkRdajBgXD1XKFJyVUBCbnNFSVtRWjJILSo2cEdmUF8mLD1HaDVvRCNBaEJnLFAwcWBZRzpObWVrTGdZT0pJLDM9aG87LDMhQE8vSGZKK0IxTi0/cnAkI1dCaT5WRjN1NTkxVDRuO0NOSlo4LUpSR1BSOWtuVDdUYjljVWMhJ1lUczQtTlhOLTo1YHU6RTtrXCoiRUxwa3VYP0thYlFQT1szLEcqb2RYWkI4LS1TdS0kaWlCOUZgNHIzcDdvSFUkNSpcci5jRFxOVSxtQkkvJmJBU0tpbERXKTRHcTRNJGJYSnQkZV1zRVYqJiZHTTReJVdCOV4/cjBKWG1JMiEhJjlpbFgjX1BDUSdlKnUia1ZTaGlaQlM/RGN0Sl4xYmxWOUYiO2c2ISFuTzdIYXBtPE5WaEhfK2o4N3MyYy04IWZSazJEXVIpUnBPRE8/JWIpOWYrcTAra09JVnIsWEcwLC5mV0V1WSZgJFVkXSFZTSI0UFNfU2A0REwkXlBCRnBoX3EvNCtoNWRJNWxzbmZvPlEzKDtVZW4vRloucUBmIW1aXW5CYSM3Zj4lIiZKJiFdIWMjUXVmajlXUCVdXSxBUCRwUGJsL1JCSlM7TXUxWyFIbWIxLV9rQ0FoOVteZSxddTVTXVo6NGE/Oiw8RT1ccTdhPjdPUmk7QGNISmAxTUxpZUtMYlJVJ05XVWBLNygzTiQ/QjY+KVVeb3VuWjc9PW5WaUE6b2NabGJeLmo+XDhQW2BWSl82JS1NODgkU2ZudEIha0JOL104VnM0Qz1hWWNmc15VaDNZTyE0LCg7MVdKLj5uOkBJJjdVLGg0dWtXby88TlxFTWYuQDhlSUVla0tIME8xYCxiXSlrKU4wSVtFV0xqUWFYbk5TYyksPWhmNDlHMV4jSG1xYV9QWDxza1pcazRaUE4sc05iNWptUF1vVG5fWElIXXMsbydwUlBDaDBBXEBZc1FtQyFOa11pRUVEJT8/VS1fW2lILiEhTmJuPE0rI1Y3ZSZYMiNuRVM3M09DaEBQSHBQTDE5bVUnbm49XUtHXlU9cjUlV2NSWCotKHFoYkhLWD4mUigtP3VtRm8tXkJyKShxIlxMN05lLEMqQCVmZj1LITJdLnFQc149W3JhLlg/dDUzQEhaUUlMJCxgS0g3UWtVX0hINzdIaDBSTzs5VDUoN2xPJis1XkMjSVlabl5ETUZBJm43alhuLEQpbTRZPUszRlgvaWYhTVs8ajBNLDNwKiE0YTlEVC8vZFQ0a3VIOyhELzpaLTJpRVtkN1MxLlorczR0PmR0QUZVOzokM182YyZaYFBwTStgOCUsbTguOCVIVy5HJU9MYWVSVUFncT1WL1p1L2pFYW5fJzI/ZmdQJz84XDk3M1RoIkkvTTpSRylKcTNgY2Q6NkczN0lgMWBsMVhmYEVzRmFmMUQxNT5sNC5mT04/Ji9xPzQqSmhUUk8qNjIjLHJpWiVwLDUzbUAwOzhWX1kmaXJla0ZQYEcqUy1TNTQtN09COCJURC0kSlYhNE9OJVZNQUZob04yLmFHNz9BTFVCI0tbMisrVVxKIiIiWXFrREhSUWY9Oj5tJEs0TD82QGhzbWtEMV8lV1omQy0jVkklOj9NWCJNR0oqZmFKP11jXlUiYGMzOyQvPEdZWjcyXWIyPEJqLW9WZSZHYGdVJ2MtX2dMV2F0a1FFbWJHdSFiY1Z1JXIwNU5pa0QlJltNXTJebl5hRkQlaltkMDZLPiZPOjkkJiVIYENVdCliYldIXz8rNnJqM3EqXGlwJkdecyVQZ2hoPW9FPU9YU0w7I1lEWD0nTkUpS3UiW2w8SmZuKVFIMlcjNz9hayIpTDAnSjI/I0JdJCM8QidcZiJAOjxLYiNrTHNDU2djX0RYNy0+P1okI2JRQWImakBPaC8/OCFrRFQ+VUY5LCZbVD0oQko6R0EjPj5APUglSEA8bkIsa0JPajhtR2QpK0EkW2UuVyxEN11NRyRWdWg9QVtTLFBINmAyREtOcDJRO2xUYipUZUp1WlMma0JaRWtwV2wvIThtWDJsQF5XSmQtS2cxK3EuTmxwbDUnL29DTy9fR29TUmE1dSZCYkY5K0lXRzQ9Q1ByJHErQyxaY3A2KWskZjRBJkZBRiZrW2BPXVosOmMoaCQhWzQpMjonL1pBWEMzX0RgRFNILi1DOmdxOjJLQWMramArb25NX2E/VFcmOzpnSTgkOS4iL1pySk8uNUlPaD44RGRrOEI+Y05kcTwtRi8/L2ReQj1FWic0YUlhOms6LU1gcygubCYoUC1aWDFqTjJmTjNMSyxePl9pV2IyMEVUU1RpWEQmXUEsVTFuTXU/PzhePFtWVTg/a29Sai9LKDxAY1NxMVktL0wxNXAlQV4laWZoQTxwSGlLRTRhdWcyZEpqailvUFZJWVxBJTBbaSE/SWhmIlkpaUA4SztvKTNpZkpTMG88ak4rXE9gLzhpOl0yVFRDLyZfJjFDMmhEJl8xPD9ZRD0hKFArQk90QSxtaVtZYShdZVhXTkNpIkBCOTU4ZGRrJElnZU5MVSleaUlWNGE7bkY/M0kubylxZi5DPSVUJjoyRDxPRUBrZ2ZNUnAmNjhDZSdIXVIqLEdgJSVUTTNTVnFWLWRxJCFnQkxKamBVcithcEhsVWBcJFBDbTktPmYyJT1HND1VXy5MMGdiQl9wLnFGLVxYbjtvaHFGbWQyWGY8U2EuRjEqNChoZDRUQDIjY1VRTTw+KDxGKFhtYD41XW5eL1tvZl9uVlprZU06NVpcQSVedUk3UWtQYSpdLCdyXVs8S2c1NE4jYGJhZUU4T1lfaF1aNjxHK21XYFcvWFIpR2lnMmAvJjtmKGJPLlBsPiQvbXBCOkImclEwPlNNNE4/ciErKktWI2hYPWxUInM3PUBbbE1bTy5IcGFUPDFqYyUrVWVtZz0pb1FnOycuUlQqR10iSllBc1gxMVdbcVx1ZmcuNDFYWWUjYS1zLls3SGBkPVk/QllBWSRHSTVVNWxcPUtSajY7Vk4oREo3LjttLC1DREBiXEp0RUJwaFdfJ0UvUWoiYVluM00wX05WWjBeWTVAc0Y7TysjVFZwX29aYGVFUlpuRCVGOyFHUUIoRFM3XnB1Q1QpUkNxPm9DdUNoXCtGS3BaYz9LXV4zRUZELDRTKlopVic3V2JeRzpLM0kyPldyYTlFPiVlNTFxZitSZTBEZWhDXkBYVyE+TzVjO05xXVEjcU0rQ2dHZys+S2ZBOTpyJjI1PVVfW2FtXWJiP0htS1FobkhVOUosMH4+ZW5kc3RyZWFtCmVuZG9iagp4cmVmCjAgMTEKMDAwMDAwMDAwMCA2NTUzNSBmIAowMDAwMDAwMDYxIDAwMDAwIG4gCjAwMDAwMDAxMTIgMDAwMDAgbiAKMDAwMDAwMDIxOSAwMDAwMCBuIAowMDAwMDAwMzMxIDAwMDAwIG4gCjAwMDAwMDA1NDQgMDAwMDAgbiAKMDAwMDAwMDY1OSAwMDAwMCBuIAowMDAwMDAwODgxIDAwMDAwIG4gCjAwMDAwMDA5NDkgMDAwMDAgbiAKMDAwMDAwMTI2MCAwMDAwMCBuIAowMDAwMDAxMzE5IDAwMDAwIG4gCnRyYWlsZXIKPDwKL0lEIApbPDYzMWQzMzdkNzRiZTVmM2QwZTliZjdiY2YyODQyYzMyPjw2MzFkMzM3ZDc0YmU1ZjNkMGU5YmY3YmNmMjg0MmMzMj5dCiUgUmVwb3J0TGFiIGdlbmVyYXRlZCBQREYgZG9jdW1lbnQgLS0gZGlnZXN0IChvcGVuc291cmNlKQoKL0luZm8gOCAwIFIKL1Jvb3QgNyAwIFIKL1NpemUgMTEKPj4Kc3RhcnR4cmVmCjQyNjgKJSVFT0YK";
   $$("[data-resume]").forEach(function(a){ a.href = "data:application/pdf;base64," + RESUME; });
 
   // Chat: optional backend URL (POST {question} -> {answer}, CORS enabled for your site).
-  var API_URL = "";
-  var KB = [
+    var API_URL = "https://portfolio-chatbot-yoaz.onrender.com/ask";
+    /*
+    var KB = [
     {k:["skill","tech","stack","java","spring","hibernate","sql"], a:"I have 4+ years of enterprise Java experience: Java 11, Spring Boot, Spring MVC, Spring Data JPA, Hibernate and SQL on MySQL, PostgreSQL and IBM DB2."},
-    {k:["project","repo","github","built","portfolio"], a:"My GitHub has a Spring Boot JPA relationship mappings API, a JSP and Servlet employee CRUD app, and a UI webpage project. See Selected work above."},
+    {k:["project","repo","github","built","portfolio"], a:"My GitHub has digi-content (a digital billing and subscription platform with Spring Boot, microservices and Kafka), a Spring Boot JPA relationship mappings API and a JSP and Servlet employee CRUD app. See Selected work above."},
     {k:["education","degree","mca","college","award","certif","speak"], a:"I hold an MCA from Mepco Schlenk Engineering College (2017 to 2019), won the Superstar Q3 2022 award at Capestart, completed an NPTEL Elite cloud computing certification, and speak English and Tamil."},
     {k:["experience","worked","job","role","capestart","nic","company"], a:"I worked as a Software Engineer at Capestart (2022 to 2023), a Full Stack Developer at NICSI, NIC (2019 to 2022) and a Software Developer Intern at NIC (2018 to 2019)."},
     {k:["break","gap","relocat","away","return"], a:"I’ve been on a career break since May 2023 because of a relocation. I’m rebuilding momentum with AI projects in Java."},
@@ -272,21 +278,59 @@ footer{padding:3rem 0;color:var(--muted);font:.8rem var(--mono)}
     {k:["api","security","oauth","jwt","rest"], a:"I build RESTful APIs with OAuth 2.0 and JJWT, and I’ve done vulnerability assessments and security defect remediation."},
     {k:["test","junit","mockito","postman"], a:"I test with JUnit, Mockito and Postman."},
     {k:["team","personality","collaborat","communicat","strength"], a:"I’m a fast learner and a creative thinker who takes ownership, collaborates across functions and communicates well with stakeholders."},
-    {k:["contact","email","hire","available","reach"], a:"I’m open to roles and collaborations. Use the Say hi section below to email me."}
-  ];
-  var CH = ["What are your main skills?","Tell me about your experience","Why the career break?","What do you make outside code?"];
-  var FB = "I don’t have an answer for that yet. Try asking about my skills, experience, AI projects or creative work.";
+    {k:["contact","email","hire","available","reach","looking","full-time","full time","open to"], a:"I’m looking for a full-time Java and Spring Boot backend role. Use the Contact section below to email me or download my resume."}
+    ];
+    */
+    var CH = ["What are your main skills?","Tell me about your experience","Why the career break?","What do you make outside code?"];
+    /*
+    var FB = "I don’t have an answer for that yet. Try asking about my skills, experience, AI projects or creative work.";
+    */
   var lg = $("#log"), qi = $("#q");
   function add(t, w){ var m = d.createElement("div"); m.className = "msg " + w; m.textContent = t; lg.appendChild(m); lg.scrollTop = lg.scrollHeight; return m; }
-  function loc(q){
+    /*
+    function loc(q){
     q = q.toLowerCase() + " "; var b = null, bs = 0;
     KB.forEach(function(e){ var s = 0; e.k.forEach(function(w){ if (q.indexOf(w) > -1) s++; }); if (s > bs){ bs = s; b = e; } });
     return b ? b.a : FB;
-  }
-  async function ans(q){
+    }
+    */
+    /*
+    async function ans(q){
     if (API_URL){ try { var r = await fetch(API_URL, {method:"POST", headers:{"Content-Type":"application/json"}, body:JSON.stringify({question:q})}), j = await r.json(); if (j && j.answer) return j.answer; } catch (e) {} }
     return loc(q);
-  }
+    }
+    */
+    async function ans(q){
+    try {
+      var r = await fetch(API_URL, {
+        method:"POST",
+        headers:{"Content-Type":"application/json"},
+        body:JSON.stringify({question:q})
+      });
+
+      var j;
+      try {
+        j = await r.json();
+      } catch (e) {
+        return "Sorry, the chatbot returned an unexpected response. Please try again.";
+      }
+
+      if (!r.ok) {
+        if (r.status === 429) {
+          return "Sorry, too many requests have been sent. Please wait a moment and try again.";
+        }
+        return "Sorry, the chatbot service is unavailable right now. Please try again shortly.";
+      }
+
+      if (j && typeof j.answer === "string" && j.answer.trim()) {
+        return j.answer;
+      }
+
+      return "Sorry, the chatbot returned an unexpected response. Please try again.";
+    } catch (e) {
+      return "Sorry, there was a network problem while contacting the chatbot. Please check your connection and try again.";
+    }
+    }
   async function ask(q){
     q = (q || "").trim(); if (!q) return;
     add(q, "me"); qi.value = "";
