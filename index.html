@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=JetBrains+Mono:wght@400;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/marked@15.0.12/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@3.2.6/dist/purify.min.js"></script>
     <style>
         :root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
             --bg:#0b0f14;--surface:#121923;--ink:#e6edf3;--muted:#93a3b8;--line:#243040;--ac:#3ddc97;--aci:#06210f;
@@ -76,6 +78,9 @@
         .log{height:250px;overflow-y:auto;display:flex;flex-direction:column;gap:.6rem}
         .msg{max-width:85%;padding:.6rem .9rem;border-radius:12px;font-size:.96rem}
         .msg.bot{background:var(--bg);align-self:flex-start}.msg.me{background:var(--ink);color:var(--bg);align-self:flex-end}
+        .msg.bot p{margin:.15rem 0}.msg.bot p:first-child{margin-top:0}.msg.bot p:last-child{margin-bottom:0}
+        .msg.bot ul,.msg.bot ol{margin:.35rem 0;padding-left:1.35rem}.msg.bot li{margin:.15rem 0}
+        .msg.bot strong{font-weight:700}.msg.bot code{font-family:var(--mono);font-size:.9em}
         .chips{display:flex;flex-wrap:wrap;gap:.5rem;margin:.8rem 0}
         .cq{padding:.3rem .8rem;border-radius:999px;font-size:.78rem}
         .row{display:flex;gap:.5rem}
@@ -220,14 +225,7 @@
         }
         if (rm) ty.textContent = roles[0]; else tick();
 
-        $$("[data-n]").forEach(function(n){
-            var to = +n.dataset.n, dec = n.dataset.n.indexOf(".") > -1, t0 = null;
-            function f(t){ t0 = t0 || t; var p = Math.min((t - t0) / 1200, 1); n.textContent = (to * p).toFixed(dec ? 1 : 0); if (p < 1) requestAnimationFrame(f); }
-            if (rm) n.textContent = to; else requestAnimationFrame(f);
-        });
-
-        var mt = $(".mq-t"); mt.innerHTML += mt.innerHTML;
-
+        $$("#tabs button").forEach(function(b){ b.setAttribute("aria-pressed", "false"); });
         var ST = {"Languages":["Java 11","SQL","JavaScript","HTML","CSS"],
             "Frameworks":["Spring Boot","Spring MVC","Spring Data JPA","Hibernate","Spring Batch","Spring Tiles","Java EE","Jakarta EE","Struts2","DWR","EHCache","Bootstrap","jQuery"],
             "Databases":["MySQL","PostgreSQL","IBM DB2"],
@@ -265,9 +263,47 @@
 
         // Chat backend: POST {question} -> {answer}. CORS is configured for the GitHub Pages origin.
         var API_URL = "https://portfolio-chatbot-yoaz.onrender.com/ask";
-        var CH = ["What are your main skills?","Tell me about your experience","Why the career break?","What do you make outside code?"];
-        var lg = $("#log"), qi = $("#q");
-        function add(t, w){ var m = d.createElement("div"); m.className = "msg " + w; m.textContent = t; lg.appendChild(m); lg.scrollTop = lg.scrollHeight; return m; }
+        var CH = [  "What are Israelin's main skills?", "Tell me about her professional experience", "Why did she take a career break?", "What does she create outside of coding?"];        var lg = $("#log"), qi = $("#q");
+        function renderAssistantMarkdown(text){
+            if (typeof marked === "undefined" || typeof DOMPurify === "undefined") {
+                return d.createTextNode(text);
+            }
+            marked.use({breaks:true, gfm:true});
+            var rendered = marked.parse(String(text || ""));
+            var clean = DOMPurify.sanitize(rendered, {
+                ALLOWED_TAGS:["p","br","strong","em","b","i","ul","ol","li","code","pre","a","blockquote"],
+                ALLOWED_ATTR:["href","title","target","rel"],
+                ALLOWED_URI_REGEXP:/^(?:(?:https?|mailto):|[^a-z]|[a-z+.-]+(?:[^a-z+.\-:]|$))/i
+            });
+            var template = d.createElement("template");
+            template.innerHTML = clean;
+            template.content.querySelectorAll("a").forEach(function(link){
+                link.target = "_blank";
+                link.rel = "noopener noreferrer";
+            });
+            return template.content;
+        }
+        function add(t, w){
+            var m = d.createElement("div");
+            m.className = "msg " + w;
+            if (w === "bot") {
+                m.textContent = t;
+            } else {
+                m.textContent = t;
+            }
+            lg.appendChild(m);
+            lg.scrollTop = lg.scrollHeight;
+            return m;
+        }
+        function setAssistantContent(element, text){
+            element.replaceChildren();
+            var rendered = renderAssistantMarkdown(text);
+            if (rendered.nodeType) {
+                element.appendChild(rendered);
+            } else {
+                element.appendChild(rendered);
+            }
+        }
         async function ans(q){
             try {
                 var r = await fetch(API_URL, {
@@ -303,7 +339,10 @@
             q = (q || "").trim(); if (!q) return;
             add(q, "me"); qi.value = "";
             var w = add("Thinking…", "bot"), a = await ans(q);
-            setTimeout(function(){ w.textContent = a; lg.scrollTop = lg.scrollHeight; }, 350);
+            setTimeout(function(){
+                setAssistantContent(w, a);
+                lg.scrollTop = lg.scrollHeight;
+            }, 350);
         }
         CH.forEach(function(c){ var b = d.createElement("button"); b.type = "button"; b.className = "cq"; b.textContent = c; b.onclick = function(){ ask(c); }; $("#chips").appendChild(b); });
         $("#send").onclick = function(){ ask(qi.value); };
