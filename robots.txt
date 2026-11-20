@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jimichaela18.github.io/israelin-michaela.github.io/sitemap.xml
