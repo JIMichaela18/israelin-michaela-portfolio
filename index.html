@@ -204,6 +204,17 @@
         var $ = function(s){ return d.querySelector(s); }, $$ = function(s){ return [].slice.call(d.querySelectorAll(s)); };
         var rm = matchMedia("(prefers-reduced-motion:reduce)").matches;
 
+        $$("[data-n]").forEach(function(n){
+            var to = Number(n.dataset.n), dec = n.dataset.n.indexOf(".") > -1, t0 = null;
+            function f(t){
+                t0 = t0 || t;
+                var p = Math.min((t - t0) / 1200, 1);
+                n.textContent = (to * p).toFixed(dec ? 1 : 0);
+                if (p < 1) requestAnimationFrame(f);
+            }
+            if (rm) n.textContent = n.dataset.n; else requestAnimationFrame(f);
+        });
+
         var mb = $("#mode");
         mb.onclick = function(){
             var c = R.dataset.mode === "create";
